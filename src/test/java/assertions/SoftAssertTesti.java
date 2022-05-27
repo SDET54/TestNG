@@ -83,12 +83,13 @@ public class SoftAssertTesti extends TestBase {
                 "Canada (dollar)", "Switzerland (franc)", "China (yuan)", "Denmark (krone)", "Eurozone (euro)",
                 "Great Britain (pound)", "Hong Kong (dollar)", "Japan (yen)", "Mexico (peso)", "Norway (krone)",
                 "New Zealand (dollar)", "Sweden (krona)", "Singapore (dollar)", "Thailand (baht)"));
-        List<WebElement> actualCurrencyDdMListElement = select.getOptions();
 
+        List<WebElement> actualCurrencyDdMListElement = select.getOptions();
         List<String> actualCurrencyDdMListString = new ArrayList<>();
         for (WebElement webElement : actualCurrencyDdMListElement) {
             actualCurrencyDdMListString.add(webElement.getText());
         }
+
         Collections.sort(actualCurrencyDdMListString);
         Collections.sort(expectedCurrencyDdMList);
 
