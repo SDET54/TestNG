@@ -95,6 +95,7 @@ public class SoftAssertTesti extends TestBase {
 
         softAssert.assertEquals(expectedCurrencyDdMList, actualCurrencyDdMListString, "Currency DdM ayni sonuclar cikmadi");
 
+        softAssert.assertAll();
 
     }
 
