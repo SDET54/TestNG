@@ -28,7 +28,7 @@ public class AmazonIlkTest {
         String tarih = date.format(dtf);
 
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
-        File tumSayfaSS = new File("target/amazon/tumSayfaSS/screenShot" + tarih + ".jpeg");
+        File tumSayfaSS = new File("target/amazon/tumSayfaSS/fullPageScreenShot" + tarih + ".jpeg");
         File temp = ts.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(temp,tumSayfaSS);
 
@@ -40,7 +40,7 @@ public class AmazonIlkTest {
         Assert.assertTrue(amazonPage.aramaSonucElementi.isDisplayed());
 
         //arama sonucu yazisinin ekran goruntusunu al
-        File aramaSonucSS = new File("target/amazon/aramaSonucSS/screenShot" + tarih + ".jpeg");
+        File aramaSonucSS = new File("target/amazon/aramaSonucSS/aramaSonucuScreenShot" + tarih + ".jpeg");
         temp = amazonPage.aramaSonucElementi.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(temp, aramaSonucSS);
 
