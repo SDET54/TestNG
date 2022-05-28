@@ -4,6 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
 import utilities.Driver;
@@ -34,6 +35,9 @@ public class AmazonIlkTest {
         //arama kutusuna Laptop yaz ve ara
         AmazonPage amazonPage = new AmazonPage();
         amazonPage.aramaKutusuElementi.sendKeys("Laptop" + Keys.ENTER);
+
+        //arama sonucunun goruntulendigini test et
+        Assert.assertTrue(amazonPage.aramaSonucElementi.isDisplayed());
 
         //arama sonucu yazisinin ekran goruntusunu al
         File aramaSonucSS = new File("target/amazon/aramaSonucSS/screenShot" + tarih + ".jpeg");
