@@ -38,7 +38,7 @@ public class HotelmycampPositiveTest {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(hotelmycampPage.usernameAfterLogin).perform();
 
-        Assert.assertTrue(hotelmycampPage.logOutTusuElementu.isDisplayed());
+        Assert.assertTrue(hotelmycampPage.logOutTusuElementi.isDisplayed());
 
         Driver.closeDriver();
 

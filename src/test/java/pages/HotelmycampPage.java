@@ -27,7 +27,7 @@ public class HotelmycampPage {
     public WebElement usernameAfterLogin;
 
     @FindBy(xpath = "//a[text()=' Log out ']")
-    public WebElement logOutTusuElementu;
+    public WebElement logOutTusuElementi;
 
     @FindBy(id = "divMessageResult")
     public WebElement girisYapilamadiElementi;
