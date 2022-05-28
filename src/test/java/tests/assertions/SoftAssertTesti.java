@@ -1,4 +1,4 @@
-package assertions;
+package tests.assertions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
