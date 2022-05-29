@@ -20,7 +20,7 @@ public class FacebookPage {
     @FindBy(name = "login")
     public WebElement loginButonuElementi;
 
-    @FindBy(id = "error_box")
+    @FindBy(xpath = "//div[@class='_9ay7']")
     public WebElement girisYapilamadiElementi;
 
 
