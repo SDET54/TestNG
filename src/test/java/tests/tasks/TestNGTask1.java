@@ -53,7 +53,7 @@ public class TestNGTask1 {
         Random rnd = new Random();
         List<Integer> randomIndexList = new ArrayList<>();
 
-        int randomSelect = 5;
+        int randomSelect = 16;
 
         while (randomIndexList.size() < randomSelect) {
             int randomIndex = rnd.nextInt(reactPage.addToCartButton.size());
@@ -65,7 +65,7 @@ public class TestNGTask1 {
         List<String> priceList = new ArrayList<>();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        float expectedTotalPrice = 0;
+        double expectedTotalPrice = 0;
         for (int i = 0; i < randomSelect; i++) {
             js.executeScript("arguments[0].click();", reactPage.addToCartButton.get(randomIndexList.get(i)));
 
@@ -76,10 +76,9 @@ public class TestNGTask1 {
 
         double actualTotalPrice = Double.parseDouble(reactPage.subtotalPriceElement.getText().replace("$", ""));
 
-
         NumberFormat numberFormat = new DecimalFormat("#0.00");
-        numberFormat.format(expectedTotalPrice);
-        numberFormat.format(actualTotalPrice);
+        expectedTotalPrice = Double.parseDouble(numberFormat.format(expectedTotalPrice));
+        actualTotalPrice = Double.parseDouble(numberFormat.format(actualTotalPrice));
 
         Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
 
