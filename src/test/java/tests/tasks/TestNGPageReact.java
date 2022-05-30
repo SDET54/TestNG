@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class TestNGTask1 {
+public class TestNGPageReact {
 
     // 1."https://react-shopping-cart-67954.firebaseapp.com/" adresine gidin
     // 2.Web sitesindeki tüm öğeleri listeleyin ve yazdirin
@@ -33,7 +33,9 @@ public class TestNGTask1 {
 
         // 2.Web sitesindeki tüm öğeleri listeleyin ve yazdirin
         // (sitede 16 urun var, 1.urun : 2.urun :.....seklinde yazdirin )
+
         ReactPage reactPage = new ReactPage();
+
         for (int i = 0; i < reactPage.productsElement.size(); i++) {
             System.out.println((i + 1) + ".urun : " + reactPage.productsElement.get(i).getText() + "\n");
         }
@@ -53,7 +55,7 @@ public class TestNGTask1 {
         Random rnd = new Random();
         List<Integer> randomIndexList = new ArrayList<>();
 
-        int randomSelect = 16;
+        int randomSelect = 5;
 
         while (randomIndexList.size() < randomSelect) {
             int randomIndex = rnd.nextInt(reactPage.addToCartButton.size());
