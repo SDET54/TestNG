@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import utilities.TestBase;
@@ -73,7 +74,7 @@ public class SoftAssertTesti extends TestBase {
         String expectedSelection = "Eurozone (euro)";
         String actualSelection = select.getFirstSelectedOption().getText();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(expectedSelection, actualSelection, "belirtilen secenek aynisi degil");
+        softAssert.assertEquals(actualSelection, expectedSelection, "belirtilen secenek aynisi degil");
 
         // 10. soft assert kullanarak DropDown listesinin su secenekleri oldugunu test edin
         // "Select One", "Australia (dollar)", "Canada (dollar)", "Switzerland (franc)", "China (yuan)", "Denmark (krone)",
@@ -93,8 +94,7 @@ public class SoftAssertTesti extends TestBase {
         Collections.sort(actualCurrencyDdMListString);
         Collections.sort(expectedCurrencyDdMList);
 
-        softAssert.assertEquals(expectedCurrencyDdMList, actualCurrencyDdMListString, "Currency DdM ayni sonuclar cikmadi");
-
+        softAssert.assertEquals(actualCurrencyDdMListString, expectedCurrencyDdMList, "Currency DdM ayni sonuclar cikmadi");
         softAssert.assertAll();
 
     }

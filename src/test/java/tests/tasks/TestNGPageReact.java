@@ -82,7 +82,7 @@ public class TestNGPageReact {
         expectedTotalPrice = Double.parseDouble(numberFormat.format(expectedTotalPrice));
         actualTotalPrice = Double.parseDouble(numberFormat.format(actualTotalPrice));
 
-        Assert.assertEquals(expectedTotalPrice, actualTotalPrice);
+        Assert.assertEquals(actualTotalPrice, expectedTotalPrice);
 
         // 7.Checkout'a tıklayın
         reactPage.checkOutButtonElement.click();
