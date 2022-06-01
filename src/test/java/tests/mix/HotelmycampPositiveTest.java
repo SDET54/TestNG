@@ -1,4 +1,4 @@
-package tests;
+package tests.mix;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
