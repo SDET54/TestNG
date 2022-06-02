@@ -1,4 +1,4 @@
-package tests.mix;
+package tests.hotelMyCamp;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

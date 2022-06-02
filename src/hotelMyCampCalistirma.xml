@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="hotelMyCamp">
+    <test name="smoke and e2e">
+        <packages>
+            <package name="tests.hotelMyCamp.smokeTest">
+            </package>
+            <package name="tests.hotelMyCamp.e2ETest">
+            </package>
+        </packages>
+    </test>
+</suite>

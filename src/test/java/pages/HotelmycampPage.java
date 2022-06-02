@@ -31,4 +31,28 @@ public class HotelmycampPage {
 
     @FindBy(id = "divMessageResult")
     public WebElement girisYapilamadiElementi;
+
+    @FindBy(id = "menuHotels")
+    public WebElement hotelManagementElementi;
+
+    @FindBy(xpath = "//a[@href='/admin/HotelAdmin']")
+    public WebElement hotelListElementi;
+
+    @FindBy(xpath = "//a[@href='/admin/HotelAdmin/Create']")
+    public WebElement addHotelElementi;
+
+    @FindBy (id = "Code")
+    public WebElement codeKutusuElementi;
+
+    @FindBy(id = "IDGroup")
+    public WebElement idGroupDdMElementi;
+
+    @FindBy(id = "btnSubmit")
+    public WebElement saveButonuElementi;
+
+    @FindBy(xpath = "//*[text()='Hotel was inserted successfully']")
+    public WebElement textAfterSaveElementi;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement okButonuElementi;
 }
